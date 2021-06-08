@@ -1,0 +1,284 @@
+@charset "utf-8"; /* Encoding Charset */
+
+/*
+  Table of Content
+1.  Body Styles
+2.  Input Design Styles
+3.  Label + Buttons Styles
+4.  Slider Styles
+5.  Rating Star Styles
+6.  General Formatting Styles
+7.  Invalid Style
+*/
+
+/* =============
+    Body Styles
+   ============= */
+
+form {
+  font-size: 20px;
+}
+
+.content {
+  width: 50%;
+  padding: 20px;
+}
+
+.imgbanner {
+  background-image: url(../Graphics/Feedback/Banner.png);
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding-top: 475px;
+}
+
+/* =====================
+    Input Design Styles
+   ===================== */
+
+.shorttext {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.shorttext:focus,
+.section:focus,
+.longform:focus {
+  border: 2.5px solid black;
+  outline: none;
+}
+
+.longform {
+  resize: none;
+}
+
+/* ========================
+    Label + Buttons Styles
+   ======================== */
+
+label {
+  padding: 12px 15px;
+}
+
+.buttons {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.buttonsubmit {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+  gap: 100px;
+}
+
+input#submit,
+input#reset {
+  width: 100px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #58a3fe;
+  border: black 2px solid;
+  color: white;
+  font-size: 16px;
+  min-height: 46.6px;
+}
+
+input#submit:hover,
+input#submit:focus,
+input#reset:hover,
+input#reset:focus {
+  color: white;
+  border: black 2.5px solid;
+  font-weight: 800;
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+}
+
+/* ===============
+    Slider Styles
+   =============== */
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 2px;
+  background-color: black;
+  align-self: center;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border: black 2px solid;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  border-radius: 50%;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb:hover,
+.slider::-webkit-slider-thumb:focus {
+  border: black 2.5px solid;
+}
+
+.slide {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+/* ====================
+    Rating Star Styles
+   ==================== */
+
+.rating1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+}
+
+.rating1 > input {
+  display: none;
+}
+
+.rating1 > label {
+  position: relative;
+  font-size: 5vw;
+  width: 100%;
+  color: black;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.rating1 > label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+  color: #ffd700;
+}
+
+.rating1 > label:hover:before,
+.rating1 > label:hover ~ label:before {
+  opacity: 1;
+  color: #ffd700;
+  transition: 0.15s;
+}
+
+.rating1 > input:checked ~ label:before {
+  opacity: 1;
+  transition: 0.15s;
+}
+
+.rating1:hover > input:checked ~ label:before {
+  opacity: 1;
+}
+
+/* ===========================
+    General Formatting Styles
+   =========================== */
+
+input {
+  background-color: white;
+}
+
+.section {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  margin: 15px 0px;
+  border-radius: 15px;
+  border: 2px black solid;
+}
+
+.choice {
+  margin-top: 10px;
+}
+
+.longform {
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+  height: 20%;
+  text-shadow: none;
+  border: 2px black solid;
+  font-size: 16px;
+}
+
+#qn3,
+#qn5,
+#qn6,
+#qn8,
+#qn9,
+#qn10 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#qn2 {
+  margin-top: 5px;
+}
+
+#qn4,
+#qn7 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+.options {
+  margin-top: 15px;
+}
+
+.options,
+.options label {
+  cursor: pointer;
+  width: 90%;
+  font-size: 22px;
+}
+
+/* ===============
+    Invalid Style
+   =============== */
+
+input:invalid:focus {
+  box-shadow: 0px 0px 5px red;
+}

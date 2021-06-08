@@ -1,0 +1,228 @@
+@charset "utf-8"; /* Encoding Charset */
+
+/*
+  Table of Content
+1.  Body Styles
+2.  Header & Footer Styles
+3.  Nav Menu
+4.  Img Banner + Img Text
+5.  Main Body
+*/
+
+/* =============
+    Body Styles
+   ============= */
+
+/* 
+Body 
+• Make body stretch to width 100% and height 100%
+• Remove all body margin
+• Make background white 
+*/
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: white;
+}
+
+/* ========================
+    Header & Footer Styles
+   ======================== */
+
+/* 
+Header Style Sheet 
+header
+• Make Header become a block
+• Set width to 100% and make min-height to 80px and max-height to 110px
+• z-index make Header order in front of all elements of the site
+• Make background center with the gradient coloring and the size is auto
+• Add padding to top and bottom by 10px
+• Remove all margins
+
+sticky
+• Make position fixed to the top and left of the website
+• Stretch sticky to 100% and set max-height to 100px
+*/
+header {
+  display: inline-block;
+  width: 100%;
+  max-height: 110px;
+  min-height: 80px;
+  z-index: 1000;
+  background-position: center;
+
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  background-size: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+/* Make header always show on the top of the webpage */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100px;
+}
+
+/* 
+Footer Style Sheet 
+footer
+• Set margin to 0
+• Set padding top and bottom to 10px
+• Set position relative to the bottom and the left of the website
+• Make background with gradient and position it to the center
+*/
+footer {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  background-position: center;
+}
+
+/* ============
+     Nav Menu
+   ============ */
+
+/* 
+Menu 
+• Make menu a block display
+
+nav
+• Make nav bar float to the right and display flex to arrange the menu buttons 
+• Give margin-right to give whitespace
+• Make all nav bar elements center
+*/
+.menu {
+  display: block;
+}
+
+/* Navigation Bar */
+nav {
+  float: right;
+  display: flex;
+  margin-right: 60px;
+  justify-content: center;
+}
+
+/* =========================
+     Img Banner + Img Text
+   ========================= */
+
+/* 
+Img Banner 
+banner
+• Give margin-top to make space for the header main menu
+• Make banner stretch to width 100%
+
+imgtext
+• Give it an absolute position
+• Transform the text to make it center
+• Make font-size 75px and font be edo
+• Make text white and give text a black shadow of 0.75 opacity
+• Make text centered and if text too long, break-word to auto break them to lines
+*/
+.banner {
+  margin-top: 98px;
+  width: 100%;
+}
+
+.imgtext {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  font-family: Edo;
+  color: white;
+  text-shadow: 0.065em 0.065em hsla(0, 0%, 0%, 0.75);
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* ==============
+     Main Body
+   ============== */
+
+/* 
+Main Body Content 
+content
+• Make content fill the body
+• Make min-height 1000px and width 55% of body
+• Make content a block display and make it centered using margin
+
+#main
+• Add space for header
+
+content .grid 
+• Create a grid layout
+• Create 3 columns and make rows auto to create more new rows if needed
+• Justify Content center to make the grid centered
+
+.span2
+• Grid row inherit makes it have no fix row
+• Grid column span make the element span 2 grid spaces
+
+.span3
+• Grid row inherit makes it have no fix row
+• Grid column span make the element span 3 grid spaces
+• Make h1 center of the grid
+*/
+
+.content {
+  height: 100%;
+  min-height: 500px;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main {
+  margin-top: 99px;
+}
+
+.content .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.span2 {
+  grid-column: span 2;
+  grid-row: inherit;
+}
+
+.span3 {
+  grid-row: inherit;
+  grid-column: 1/-1;
+}
+
+.span3 h1 {
+  text-align: center;
+}

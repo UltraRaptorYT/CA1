@@ -1,0 +1,182 @@
+@charset "utf-8"; /* Encoding Charset*/
+
+/*
+  Table of Content
+1.  Format Styles
+2.  Text Styles
+3.  Table Styles
+*/
+
+/* ===============
+    Format Styles
+   =============== */
+
+.imgbanner {
+  background-image: url(../Graphics/DAAA/DAAABANNER.jpg);
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 100px;
+  padding-top: 275px;
+}
+
+iframe {
+  justify-self: center;
+  width: 100%;
+  height: 459px;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.flex p {
+  font-size: 21px;
+}
+
+.flex a {
+  text-decoration: none;
+  width: 140px;
+}
+
+.empty {
+  height: 15px;
+}
+
+.empty:last-of-type {
+  height: 75px;
+}
+
+.flex a:hover {
+  text-decoration: underline;
+}
+
+.career {
+  margin-bottom: 20px;
+}
+
+/* =============
+    Text Styles
+   ============= */
+
+h2,
+caption {
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  color: white;
+  text-shadow: 3px 3px 0px black;
+  padding: 10px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: edo;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+caption {
+  margin-bottom: 30px;
+}
+
+p,
+h3 {
+  margin: 0px 20px 10px 20px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* ==============
+    Table Styles
+   ============== */
+
+table {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th:nth-child(2),
+thead th:last-of-type {
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-family: edo;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+td,
+tbody th,
+tfoot th {
+  text-align: center;
+  border: 2px black solid;
+  padding: 10px;
+  font-size: 16px;
+}
+
+thead th:first-of-type {
+  border: transparent;
+  background-color: transparent;
+}
+
+.bodycol {
+  background-color: white;
+  text-align: center;
+  width: 40%;
+}
+
+thead th:nth-child(2) {
+  border-radius: 25px 0px 0px 0px;
+  padding: 15px;
+}
+
+thead th:last-of-type {
+  border-radius: 0px 25px 0px 0px;
+  padding: 15px;
+}
+
+tfoot th {
+  font-size: 21px;
+  font-family: edo;
+  font-weight: normal;
+}
+
+.firstcol {
+  font-size: 18px;
+  width: 10%;
+  font-family: edo;
+  font-weight: normal;
+}
+
+td {
+  font-size: 17px;
+}

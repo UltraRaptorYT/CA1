@@ -1,0 +1,140 @@
+@charset "utf-8"; /* Encoding Charset */
+
+/*
+  Table of Content
+1.  Button Styles
+2.  Layout + Image Banner
+3.  Blockquote Styles
+4.  Formatting Styles
+*/
+
+/* ===============
+    Button Styles
+   =============== */
+
+.button {
+  background-color: #58a3fe;
+  padding: 10px;
+  color: white;
+  border: 2px black solid;
+  text-align: center;
+  border-radius: 25px;
+  width: 60%;
+  justify-self: center;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button p {
+  color: white;
+  line-height: 0.5;
+}
+
+.button:hover,
+.button:focus {
+  border: 2.5px black solid;
+  font-weight: 800;
+  background: linear-gradient(
+    -150deg,
+    #9a338e,
+    #7160c1,
+    #0083dd,
+    #00a0e0,
+    #00b6d0,
+    #00c9b7
+  );
+  outline: none;
+}
+
+.button svg {
+  width: 25px;
+  fill: white;
+}
+
+/* =======================
+    Layout + Image Banner
+   ======================= */
+
+.imgbanner {
+  background-image: url(../Graphics/Home/Banner.png);
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding-top: 475px;
+}
+
+.grid {
+  margin-top: 15px;
+}
+
+/* ===================
+    Blockquote Styles
+   =================== */
+
+blockquote {
+  width: 70%;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  font-size: 17px;
+}
+
+blockquote cite::before {
+  content: "\2014\2002";
+  text-align: center;
+}
+
+blockquote i {
+  height: 80px;
+  padding: 5px;
+}
+
+/* ===================
+    Formatting Styles
+   =================== */
+
+.values {
+  width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+
+.personality {
+  width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+
+.intro {
+  width: 85%;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+.empty {
+  height: 75px;
+}
+
+.ProfilePic {
+  width: 150px;
+  border-radius: 50%;
+  justify-self: center;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+}
+
+.ImgInterest {
+  justify-self: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 50%;
+}

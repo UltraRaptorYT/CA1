@@ -1,0 +1,388 @@
+@charset "utf-8"; /* Encoding Charset*/
+
+/*
+  Table of Content
+1.  Fonts
+2.  Reset Styles
+3.  Header Styles
+4.  Footer Styles
+5.  Menu Bar
+6.  Image Carousel
+7.  Main Styles
+*/
+
+/* =========
+     Fonts
+   ========= */
+
+/*
+Include Edo Font 
+• TTF type is a truetype file
+*/
+@font-face {
+  font-family: "Edo";
+  src: url(../Graphics/edo.ttf) format("truetype");
+}
+
+/*
+Include OpenSans Font
+• TTF type is a truetype file
+*/
+@font-face {
+  font-family: "OpenSans";
+  src: url(../Graphics/OpenSans-Regular.ttf) format("truetype");
+}
+
+/* ==============
+    Reset Styles
+   ============== */
+
+/* 
+*
+• Make word color black by default
+• Makes font OpenSans if Website does not support than it will do the following Arial, Helvetica, sans-serif
+• Make all box sizing include border box
+*/
+* {
+  color: black;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===============
+    Header Styles
+   =============== */
+
+/* 
+Header Styles
+.sitelogo img
+• Make sure height of image logo does not exceeds 75px
+
+.sitelogo a:focus
+• Removes outline when focused on Profile Picture as it is a link
+
+.sitelogo
+• Float left
+• margin-left 60px
+
+.sitetitle
+• Float left
+• margin-left 20px
+• margin-top 18px to make it centered with the image
+
+.sitetitle p
+• Set color to white
+• Font-size 20px
+• Align text center
+• line height 0 to remove line margin
+• Make font EDO
+• Add text shadow to the Text
+*/
+.sitelogo img {
+  max-height: 75px;
+}
+
+.sitelogo a:focus {
+  outline: none;
+}
+
+/* Header Logo */
+.sitelogo {
+  float: left;
+  margin-left: 60px;
+}
+
+/* Header Text */
+.sitetitle {
+  float: left;
+  margin-top: 18px;
+  margin-left: 20px;
+}
+
+/* Header Text */
+.sitetitle p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 0;
+  font-family: Edo;
+  text-shadow: 0.15em 0.075em hsla(0, 0%, 0%, 0.75);
+}
+
+/* ===============
+    Footer Styles
+   =============== */
+
+/* 
+Footer Styles
+footer 
+• Set width of footer to be 100%
+• Set font family to Times New Roman
+• Make text align center
+• Remove all Margin
+
+footer p
+• Make width 100%
+• Set color white
+• Set font family to Times New Roman
+• Set font size to 16px
+• Make text align center
+• Remove all Margin
+
+footer h1
+• Set color white
+• Set font family to Times New Roman
+• Set font size to 18px
+• Make text align center
+• Remove all Margin
+
+.contactme
+• Make it a flex
+• Make content of flex center and vertically centered
+• Make SVG white
+• Set width and height to 100%
+• Add 10px to the Margin Top and Margin Bottom 
+• Increase Gap between flex elements
+
+.contactme svg & .contactme a:focus
+• Make SVG white
+• SVG size 30px
+• Remove outline when focused
+*/
+
+footer {
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 0;
+}
+
+footer p {
+  width: 100%;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+footer h1 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+.contactme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  gap: 15px;
+}
+
+.contactme svg,
+.contactme a:focus {
+  fill: white;
+  width: 30px;
+  outline: none;
+}
+
+/* ==========
+    Menu Bar
+   ========== */
+
+/* 
+Menu Bar 
+nav li
+• Make it a block display
+• Make li elements float left 
+• Make margin left 60px for all li elements in nav
+
+nav a:active & nav a:link & nav a:visited & nav a:focus
+• When a is active, link or visited or focused, they will have the same style
+• Color white with no underline
+• A display block with padding of 10px
+• Font size of 16px
+• Border radius of 25px and 2.25px white solid
+
+nav a:hover & nav a:focus 
+• Border radius of 25px
+• Remove outline
+• Change Background color to #58a3fe
+• A display block with padding of 10px
+• Font size of 16px
+
+nav a#CurrentPage
+• Give ID for the current page the user is at
+• Make border thicker from 2.5px to 3px
+• Make words inside bold
+*/
+nav li {
+  display: block;
+  float: left;
+  margin-left: 60px;
+}
+
+nav a:active,
+nav a:link,
+nav a:visited,
+nav a:focus {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  border: 2.25px white solid;
+  border-radius: 25px;
+}
+
+nav a:hover,
+nav a:focus {
+  border-radius: 25px;
+  padding: 10px;
+  outline: none;
+  display: block;
+  font-size: 16px;
+  background-color: #58a3fe;
+}
+
+nav a#CurrentPage {
+  font-weight: 900;
+  border: 3px white solid;
+}
+
+/* ================
+    Image Carousel
+   ================ */
+
+/*
+Image Carousel
+.imgCarouselDiv 
+• Make height 100%
+• Make it a flex to make all content centered horizontally and vertically
+• Make background color black
+
+.carousel
+• Make position relative
+• Width 100%
+• Hide Overflow as that's how we are storing the images
+
+.carouselImg
+• Make it a flex to make all self centered horizontally
+• Width 100%
+
+.carouselImg img 
+• Make images width 100% and height 100%
+• When they appear to have a transition
+
+.carouselImg input
+• Hide the display
+
+.dots
+• Make it a flex to make all self centered horizontally
+• Margin 5px to space out the dots
+
+.dots label
+• Make the design of the dots like making it round and have a black border around it
+• Make it so that when the dots is hovered it will make the cursor a pointer
+• Transition for all 
+• Make size of dots 15px width and height 
+• Margin 5px
+
+.dots label:hover 
+• Make dots 0.75 opacity with a black background
+
+#img1:checked ~ .m1
+#img2:checked ~ .m2 
+#img3:checked ~ .m3
+#img4:checked ~ .m4
+#img5:checked ~ .m5
+• When img1 input is checked, it will make m1 margin 0 to show the first image as each image is 100% same as the other once
+*/
+.imgCarouselDiv {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carouselImg {
+  display: flex;
+  width: 100%;
+  justify-self: center;
+}
+.carouselImg img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.carouselImg input {
+  display: none;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.dots label {
+  border-radius: 50%;
+  border: solid black 3px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+}
+.dots label:hover {
+  opacity: 0.75;
+  background-color: black;
+}
+#img1:checked ~ .m1 {
+  margin-left: 0;
+}
+
+#img2:checked ~ .m2 {
+  margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+  margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+  margin-left: -300%;
+}
+
+#img5:checked ~ .m5 {
+  margin-left: -400%;
+}
+
+/* =============
+    Main Styles
+   ============= */
+
+/*
+Main Styles
+h1 
+• Make h1 font Edo
+• Font Size 36px
+• Font weight normal
+• Color Black
+*/
+
+h1 {
+  font-family: Edo;
+  font-size: 36px;
+  font-weight: normal;
+  color: black;
+}
